@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Interaction Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Contact Interaction Manager</h1>
+        <p>Organize your contacts by interaction frequency.</p>
+    </header>
+
+    <main>
+
+        <!-- Add Contact Section -->
+        <section id="add-contact-section">
+            <h2>Add a New Contact</h2>
+
+            <form id="contact-form">
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Name"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone number"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email address (optional)"
+                >
+
+                                
+                <button type="submit">Add Contact</button>
+            </form>
+        </section>
+
+        <!-- Search and Sort Section -->
+        <section id="controls-section">
+            <h2>My Contacts</h2>
+
+            <input
+                type="search"
+                id="search"
+                placeholder="Search by name or phone..."
+            >
+
+                      
+       </section>
+
+        <!-- Contact List Section -->
+        <section id="contact-list-section">
+            <div id="contact-list">
+                <p>Your contacts will appear here.</p>
+            </div>
+        </section>
+
+        <!-- Pagination Section -->
+        <nav id="pagination" aria-label="Contact pages">
+            <button id="prev-btn" type="button" disabled>
+                Previous
+            </button>
+
+            <span id="page-info">Page 1</span>
+
+            <button id="next-btn" type="button" disabled>
+                Next
+            </button>
+        </nav>
+
+    </main>
+
+    <!-- Contact Details Modal -->
+    <dialog id="contact-modal">
+        <h2 id="modal-name">Contact Details</h2>
+        <p id="modal-phone"></p>
+        <p id="modal-email"></p>
+       
+
+        <button id="close-modal" type="button">Close</button>
+    </dialog>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

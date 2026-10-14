@@ -1,0 +1,157 @@
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #263238;
+    margin: 0;
+    padding: 24px;
+}
+
+/* Header */
+header {
+    background-color: #234e70;
+    color: white;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+header h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 22px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 21px;
+}
+
+/* Form inputs and controls */
+input,
+select,
+button {
+    font: inherit;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    margin: 4px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #72a9d4;
+}
+
+/* Add contact button */
+button {
+    background-color: #246bce;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background-color: #174ea6;
+}
+
+button:disabled {
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+/* Contact form */
+#contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#contact-form input {
+    flex: 1 1 180px;
+    min-width: 0;
+}
+#controls-section input {
+    max-width: 100%;
+    width: 300px;
+}
+
+/* Contact list */
+#contact-list {
+    display: grid;
+    gap: 12px;
+}
+
+/* Pagination */
+#pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px;
+}
+
+/* Contact details popup */
+#contact-modal {
+    border: none;
+    border-radius: 12px;
+    padding: 28px;
+    width: min(90%, 420px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+#contact-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    #contact-form {
+        flex-direction: column;
+    }
+
+    #contact-form input,
+    #contact-form button {
+        width: 100%;
+        margin: 0;
+    }
+
+    #pagination {
+        flex-wrap: wrap;
+    }
+}
